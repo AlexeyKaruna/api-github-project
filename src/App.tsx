@@ -55,36 +55,7 @@ const App: React.FC = () => {
         setError(error.toString());
       });
   };
-  return (
-    <StyledApp>
-      <Header>
-        <SearchInput
-          placeholder="Введите название организации"
-          onChange={handleSearch}
-          value={orgInput}
-        />
-        <ButtonSearch onClick={handleSubmit} disabled={orgInput.length === 0} />
-      </Header>
-
-      {error ? (
-        <h1>{error}/</h1>
-      ) : (
-        dataRepositories.map(function (item) {
-          return (
-            <RepositoryCard
-              key={item.name}
-              name={item.name}
-              org={orgInput}
-              updated_at={item.updated_at}
-              html_url={item.html_url}
-              stargazers_count={item.stargazers_count}
-              avatar_url={item.owner?.avatar_url}
-            />
-          );
-        })
-      )}
-    </StyledApp>
-  );
+  return <div></div>;
 };
 
 export default App;
